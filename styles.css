@@ -1,0 +1,200 @@
+/* 2026여수세계섬박람회 - 섬 투어 미식 패스포트 CSS */
+
+/* 기본 스타일 */
+:root {
+  --primary: #1D4ED8;
+  --secondary: #34D399;
+  --accent: #F59E0B;
+  --dark: #1F2937;
+  --light: #F3F4F6;
+  --ocean-blue: #0369A1;
+  --island-green: #047857;
+  --sunset-orange: #EA580C;
+}
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.logo-text {
+  font-family: 'GmarketSans', sans-serif;
+  font-weight: bold;
+}
+
+/* 헤더 스타일 */
+.header-gradient {
+  background: linear-gradient(135deg, var(--ocean-blue), var(--island-green));
+}
+
+/* 내비게이션 스타일 */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* 섬 카드 스타일 */
+.island-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.island-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 패스포트 스타일 */
+.passport-container {
+  position: relative;
+  perspective: 1000px;
+}
+
+.passport {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.passport-front, .passport-back {
+  backface-visibility: hidden;
+}
+
+.passport-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.passport-container:hover .passport {
+  transform: rotateY(180deg);
+}
+
+/* 스탬프 애니메이션 */
+.stamp {
+  transition: transform 0.3s ease;
+}
+
+.stamp:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+  
+  .passport-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* 섹션 전환 애니메이션 */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 비즈니스 섹션 스타일 */
+.stats-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.stats-card:hover {
+  border-left-color: var(--accent);
+  background-color: rgba(249, 250, 251, 0.8);
+}
+
+/* 타임라인 스타일 */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background-color: var(--ocean-blue);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 30px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--ocean-blue);
+  border: 4px solid white;
+  transform: translateX(-50%);
+}
+
+/* 애니메이션 클래스 */
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

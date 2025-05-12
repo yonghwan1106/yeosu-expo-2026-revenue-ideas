@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>패스포트 안내 - 섬 투어 미식 패스포트</title>
+  <meta name="description" content="2026년 여수세계섬박람회의 수익사업 아이디어인 '섬 투어 미식 패스포트'의 종류와 혜택을 소개합니다.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts - Pretendard & Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D4ED8',
+            secondary: '#34D399',
+            accent: '#F59E0B',
+            ocean: '#0369A1',
+            island: '#047857',
+            sunset: '#EA580C'
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Noto Sans KR', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50">
+  <!-- 헤더 -->
+  <header class="header-gradient text-white shadow-lg">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex justify-between items-center">
+        <div class="logo-text text-2xl md:text-3xl font-bold">
+          2026 여수세계섬박람회
+        </div>
+        
+        <!-- 데스크톱 네비게이션 -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="index.html" class="nav-link font-medium hover:text-secondary">홈</a>
+          <a href="concept.html" class="nav-link font-medium hover:text-secondary">컨셉 소개</a>
+          <a href="passport.html" class="nav-link font-medium hover:text-secondary">패스포트 안내</a>
+          <a href="islands.html" class="nav-link font-medium hover:text-secondary">참여 섬</a>
+          <a href="business.html" class="nav-link font-medium hover:text-secondary">사업 계획</a>
+          <a href="trend-analysis-report-web.html" class="nav-link font-medium hover:text-secondary">트렌드 분석</a>
+        </nav>
+        
+        <!-- 모바일 메뉴 버튼 -->
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- 모바일 메뉴 -->
+      <div id="mobile-menu" class="md:hidden hidden mt-4 pb-2">
+        <a href="index.html" class="block py-2 hover:text-secondary">홈</a>
+        <a href="concept.html" class="block py-2 hover:text-secondary">컨셉 소개</a>
+        <a href="passport.html" class="block py-2 hover:text-secondary">패스포트 안내</a>
+        <a href="islands.html" class="block py-2 hover:text-secondary">참여 섬</a>
+        <a href="business.html" class="block py-2 hover:text-secondary">사업 계획</a>
+        <a href="trend-analysis-report-web.html" class="block py-2 hover:text-secondary">트렌드 분석</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- 페이지 제목 섹션 -->
+  <section class="bg-gradient-to-r from-ocean to-island text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold mb-2 fade-in">패스포트 안내</h1>
+      <p class="text-lg fade-in">섬 투어 미식 패스포트의 종류와 이용 방법</p>
+    </div>
+  </section>
+  
+  <!-- 패스포트 소개 섹션 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-center mb-10 fade-in">미식 패스포트란?</h2>
+        <p class="text-lg text-gray-700 mb-6 fade-in">
+          미식 패스포트는 여수의 아름다운 섬들을 탐험하며 지역 특산물과 음식 문화를 체험할 수 있는 통합 플랫폼입니다. 실물 패스포트와 모바일 앱을 결합한 시스템으로, 각 섬을 방문하며 스탬프를 모으고 다양한 혜택을 받을 수 있습니다.
+        </p>
+        <div class="flex flex-col md:flex-row items-center gap-8 mt-10">
+          <div class="md:w-1/2 slide-in-left">
+            <h3 class="text-xl font-bold mb-4 text-ocean">듀얼 시스템</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-ocean mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">실물 패스포트: 아날로그 감성의 종이 패스포트에 실제 스탬프를 찍는 재미</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-ocean mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">모바일 앱: QR코드 인증으로 간편하게 스탬프를 수집하고 혜택을 관리</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-ocean mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">상호 연동: 오프라인과 온라인 경험을 자유롭게 오가며 활용 가능</span>
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/2 slide-in-right">
+            <h3 class="text-xl font-bold mb-4 text-sunset">활용 방법</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-sunset mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">섬 방문: 참여 섬을 방문하여 특산물 체험 프로그램에 참여</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-sunset mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">스탬프 수집: 체험 프로그램 참여 또는 특산물 구매 시 스탬프 획득</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-sunset mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">혜택 받기: 수집한 스탬프 수에 따라 다양한 혜택과 기념품 획득</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 패스포트 종류 섹션 -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">패스포트 종류</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <!-- 기본형 패스포트 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden slide-in-left">
+          <div class="bg-ocean h-3"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-ocean">기본형</h3>
+            <p class="text-3xl font-bold mb-4">5,000원</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">10개 스탬프 공간</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">기본 스탬프 디자인</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">모바일 앱 무료 이용</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">표준 보상 혜택</span>
+              </li>
+            </ul>
+            <p class="text-sm text-gray-500 mt-auto">
+              섬 탐험을 시작하는 여행자를 위한 기본 패스포트
+            </p>
+          </div>
+        </div>
+        
+        <!-- 프리미엄형 패스포트 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden fade-in">
+          <div class="bg-island h-3"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-island">프리미엄형</h3>
+            <p class="text-3xl font-bold mb-4">20,000원</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">20개 스탬프 공간</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">프리미엄 스탬프 디자인</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">체험 프로그램 10% 할인</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">업그레이드된 보상 혜택</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">전용 웰컴 키트</span>
+              </li>
+            </ul>
+            <p class="text-sm text-gray-500 mt-auto">
+              더 많은 섬을 탐험하고 혜택을 누리는 여행자를 위한 패스포트
+            </p>
+          </div>
+        </div>
+        
+        <!-- 한정판 패스포트 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden slide-in-right">
+          <div class="bg-sunset h-3"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-sunset">한정판</h3>
+            <p class="text-3xl font-bold mb-4">30,000원</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-sunset mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">20개 스탬프 공간</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-sunset mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">디자이너 콜라보 디자인</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-sunset mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">체험 프로그램 20% 할인</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-sunset mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">VIP 전용 보상 혜택</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-sunset mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">한정판 특별 굿즈 세트</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-sunset mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">일부 섬 우선 탐방권</span>
+              </li>
+            </ul>
+            <p class="text-sm text-gray-500 mt-auto">
+              컬렉터와 VIP 여행자를 위한 특별 한정판 패스포트
+            </p>
+          </div>
+        </div>
+        
+        <!-- 가족형 패스포트 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden fade-in">
+          <div class="bg-primary h-3"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-primary">가족형</h3>
+            <p class="text-3xl font-bold mb-4">15,000원</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">4인 가족용 공유 패스포트</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">15개 스탬프 공간</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">가족 체험 프로그램 15% 할인</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">가족 친화적 코스 추천</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">어린이용 특별 활동지 포함</span>
+              </li>
+            </ul>
+            <p class="text-sm text-gray-500 mt-auto">
+              가족 단위 여행자를 위한 공유형 패스포트
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 3D 패스포트 섹션 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">패스포트 살펴보기</h2>
+      
+      <div class="flex flex-col md:flex-row gap-10 items-center max-w-5xl mx-auto">
+        <div class="md:w-1/2 fade-in">
+          <div class="passport-container w-full max-w-sm mx-auto">
+            <div class="passport relative w-full h-96 transition-transform duration-700">
+              <div class="passport-front absolute w-full h-full bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="bg-sunset h-32 flex items-center justify-center">
+                  <h3 class="text-white text-2xl font-bold text-center">여수 섬 투어<br>미식 패스포트</h3>
+                </div>
+                <div class="p-6">
+                  <div class="border-b-2 border-gray-200 pb-4 mb-4">
+                    <p class="text-gray-600 mb-2">이름 / Name</p>
+                    <p class="font-medium">홍길동 / Hong Gil-dong</p>
+                  </div>
+                  <div class="border-b-2 border-gray-200 pb-4 mb-4">
+                    <p class="text-gray-600 mb-2">여권번호 / Passport No.</p>
+                    <p class="font-medium">YS-2026-00001</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 mb-2">유효기간 / Valid Until</p>
+                    <p class="font-medium">2026.09.30</p>
+                  </div>
+                </div>
+              </div>
+              <div class="passport-back absolute w-full h-full bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-4 text-center">스탬프 컬렉션</h3>
+                  <div class="grid grid-cols-3 gap-4">
+                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-ocean border-2 border-dashed border-ocean">
+                      <span class="text-xs font-bold">돌산도</span>
+                    </div>
+                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-island border-2 border-dashed border-island">
+                      <span class="text-xs font-bold">거문도</span>
+                    </div>
+                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-sunset border-2 border-dashed border-sunset">
+                      <span class="text-xs font-bold">금오도</span>
+                    </div>
+                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-ocean border-2 border-dashed border-ocean">
+                      <span class="text-xs font-bold">낭도</span>
+                    </div>
+                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-island border-2 border-dashed border-island">
+                      <span class="text-xs font-bold">백야도</span>
+                    </div>
+                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-sunset border-2 border-dashed border-sunset">
+                      <span class="text-xs font-bold">오동도</span>
+                    </div>
+                  </div>
+                  <p class="text-sm text-gray-500 mt-6 text-center">패스포트를 클릭하면 뒤집을 수 있습니다</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2 slide-in-right">
+          <h3 class="text-2xl font-bold mb-6 text-ocean">특별한 미식 여권</h3>
+          <p class="text-gray-700 mb-4">
+            섬 투어 미식 패스포트는 단순한 기념품이 아닌, 여수의 섬과 특산물을 탐험하는 여정을 기록하는 여행 동반자입니다. 
+          </p>
+          <p class="text-gray-700 mb-4">
+            고급 종이와 특수 인쇄 기법으로 제작되어 소장 가치가 높으며, 각 섬을 방문할 때마다 독특한 디자인의 스탬프가 추가됩니다.
+          </p>
+          <p class="text-gray-700 mb-6">
+            패스포트 내부에는 각 섬의 위치, 특산물, 추천 체험 프로그램, 흥미로운 이야기 등이 담겨 있어 여행을 더욱 풍부하게 만들어 줍니다.
+          </p>
+          
+          <h4 class="text-xl font-bold mb-4 text-island">모바일 앱 연동</h4>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700">QR코드 스캔으로 간편하게 실물 패스포트와 앱 연동</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700">실시간 위치 기반 주변 참여 업체 및 체험 프로그램 안내</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700">나만의 여행 기록 및 소셜 미디어 공유 기능</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 보상 체계 섹션 -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">스탬프 보상 체계</h2>
+      
+      <div class="max-w-5xl mx-auto">
+        <div class="timeline-container pl-8 fade-in">
+          <!-- 3개 스탬프 -->
+          <div class="timeline-item mb-12">
+            <div class="timeline-marker"></div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                  <div class="md:w-1/4">
+                    <div class="bg-gray-100 rounded-full h-24 w-24 mx-auto flex items-center justify-center">
+                      <span class="text-2xl font-bold text-ocean">3개</span>
+                    </div>
+                  </div>
+                  <div class="md:w-3/4">
+                    <h3 class="text-xl font-bold mb-2">여수 특산물 할인 쿠폰</h3>
+                    <p class="text-gray-700 mb-4">
+                      참여 업체에서 사용 가능한 여수 특산물 10% 할인 쿠폰을 제공합니다.
+                    </p>
+                    <div class="flex items-center text-sunset">
+                      <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                      </svg>
+                      <span class="text-sm font-medium">모든 패스포트 종류 해당</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 5개 스탬프 -->
+          <div class="timeline-item mb-12">
+            <div class="timeline-marker"></div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                  <div class="md:w-1/4">
+                    <div class="bg-gray-100 rounded-full h-24 w-24 mx-auto flex items-center justify-center">
+                      <span class="text-2xl font-bold text-island">5개</span>
+                    </div>
+                  </div>
+                  <div class="md:w-3/4">
+                    <h3 class="text-xl font-bold mb-2">여수 기념품 증정</h3>
+                    <p class="text-gray-700 mb-4">
+                      여수세계섬박람회 로고가 새겨진 키링 또는 마그넷 중 하나를 선택하여 증정합니다.
+                    </p>
+                    <div class="flex items-center text-sunset">
+                      <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                      </svg>
+                      <span class="text-sm font-medium">모든 패스포트 종류 해당</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 8개 스탬프 -->
+          <div class="timeline-item mb-12">
+            <div class="timeline-marker"></div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                  <div class="md:w-1/4">
+                    <div class="bg-gray-100 rounded-full h-24 w-24 mx-auto flex items-center justify-center">
+                      <span class="text-2xl font-bold text-sunset">8개</span>
+                    </div>
+                  </div>
+                  <div class="md:w-3/4">
+                    <h3 class="text-xl font-bold mb-2">여수 특산물 미니 세트</h3>
+                    <p class="text-gray-700 mb-4">
+                      여수의 대표 특산물로 구성된 시식용 미니 세트를 제공합니다. 돌산갓김치, 거문도 쑥차, 멸치 등이 소포장으로 구성되어 있습니다.
+                    </p>
+                    <div class="flex items-center text-sunset">
+                      <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                      </svg>
+                      <span class="text-sm font-medium">프리미엄형, 한정판, 가족형 패스포트 해당</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 10개 스탬프 -->
+          <div class="timeline-item mb-12">
+            <div class="timeline-marker"></div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                  <div class="md:w-1/4">
+                    <div class="bg-gray-100 rounded-full h-24 w-24 mx-auto flex items-center justify-center">
+                      <span class="text-2xl font-bold text-ocean">10개</span>
+                    </div>
+                  </div>
+                  <div class="md:w-3/4">
+                    <h3 class="text-xl font-bold mb-2">박람회 기념 한정판 굿즈</h3>
+                    <p class="text-gray-700 mb-4">
+                      2026여수세계섬박람회를 기념하는 한정판 굿즈를 증정합니다. 에코백, 텀블러, 노트 등 다양한 상품 중 하나를 선택할 수 있습니다.
+                    </p>
+                    <div class="flex items-center text-sunset">
+                      <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                      </svg>
+                      <span class="text-sm font-medium">모든 패스포트 종류 해당</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 15개 이상 스탬프 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                  <div class="md:w-1/4">
+                    <div class="bg-gray-100 rounded-full h-24 w-24 mx-auto flex items-center justify-center">
+                      <span class="text-2xl font-bold text-sunset">15개+</span>
+                    </div>
+                  </div>
+                  <div class="md:w-3/4">
+                    <h3 class="text-xl font-bold mb-2">VIP 인증서 및 특별 혜택</h3>
+                    <p class="text-gray-700 mb-4">
+                      여수 섬 탐험가 VIP 인증서와 함께 다음 방문 시 사용할 수 있는 특별 혜택을 제공합니다. 숙박 할인, 특별 체험 프로그램 우선 참여권 등이 포함됩니다.
+                    </p>
+                    <div class="flex items-center text-sunset">
+                      <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                      </svg>
+                      <span class="text-sm font-medium">프리미엄형 및 한정판 패스포트는 추가 혜택 제공</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 앱 섹션 -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">모바일 앱 기능</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- 앱 기능 1 -->
+        <div class="bg-white rounded-xl shadow-md p-6 slide-in-left">
+          <div class="w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">디지털 패스포트 관리</h3>
+          <p class="text-gray-700">
+            실물 패스포트와 연동되는 디지털 스탬프 컬렉션을 관리할 수 있습니다. QR코드 인증을 통해 스탬프를 수집하고, 보상 혜택을 확인할 수 있습니다.
+          </p>
+        </div>
+        
+        <!-- 앱 기능 2 -->
+        <div class="bg-white rounded-xl shadow-md p-6 fade-in">
+          <div class="w-14 h-14 bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">참여 업체 안내</h3>
+          <p class="text-gray-700">
+            GPS 기반으로 주변의 참여 업체와 체험 프로그램을 확인할 수 있습니다. 각 업체의 위치, 영업시간, 특산물 정보, 체험 프로그램 소개 등을 제공합니다.
+          </p>
+        </div>
+        
+        <!-- 앱 기능 3 -->
+        <div class="bg-white rounded-xl shadow-md p-6 slide-in-right">
+          <div class="w-14 h-14 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">예약 및 결제 시스템</h3>
+          <p class="text-gray-700">
+            체험 프로그램 예약 및 특산물 구매를 앱에서 간편하게 진행할 수 있습니다. 앱 전용 할인 및 프로모션도 제공됩니다.
+          </p>
+        </div>
+        
+        <!-- 앱 기능 4 -->
+        <div class="bg-white rounded-xl shadow-md p-6 slide-in-left">
+          <div class="w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">특산물 정보 및 스토리텔링</h3>
+          <p class="text-gray-700">
+            각 섬의 역사와 특산물에 대한 풍부한 정보와 스토리텔링 콘텐츠를 제공합니다. 오디오 가이드, 사진, 동영상 등 다양한 형태로 즐길 수 있습니다.
+          </p>
+        </div>
+        
+        <!-- 앱 기능 5 -->
+        <div class="bg-white rounded-xl shadow-md p-6 fade-in">
+          <div class="w-14 h-14 bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">개인 맞춤형 코스 추천</h3>
+          <p class="text-gray-700">
+            사용자의 선호도와 방문 이력을 기반으로 맞춤형 섬 투어 코스를 추천합니다. 당일 코스, 1박2일 코스, 테마별 코스 등 다양한 옵션을 제공합니다.
+          </p>
+        </div>
+        
+        <!-- 앱 기능 6 -->
+        <div class="bg-white rounded-xl shadow-md p-6 slide-in-right">
+          <div class="w-14 h-14 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">소셜 공유 기능</h3>
+          <p class="text-gray-700">
+            나만의 여행 경로와 체험 내용을 소셜 미디어에 공유할 수 있습니다. 방문한 섬과 체험한 특산물에 대한 리뷰도 작성하고 공유할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA 섹션 -->
+  <section class="py-16 bg-gradient-to-r from-ocean to-island text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6 fade-in">지금 패스포트와 함께 여수의 섬을 탐험하세요</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto fade-in">
+        섬 투어 미식 패스포트로 여수의 아름다운 섬과 풍부한 특산물을 경험해보세요.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
+        <a href="islands.html" class="bg-white text-ocean font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+          참여 섬 살펴보기
+        </a>
+        <a href="business.html" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-green-400 transition duration-300">
+          사업 계획 확인하기
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 푸터 -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <div class="logo-text text-xl font-bold mb-2">
+            2026 여수세계섬박람회
+          </div>
+          <p class="text-gray-400 text-sm">
+            전남 여수시 박람회길 1, 국제관 A동 2층
+          </p>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-end">
+          <div class="flex space-x-4 mb-4">
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 9.99 9.99 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="text-gray-400 text-sm text-center md:text-right">
+            &copy; 2025 (재)2026여수세계섬박람회조직위원회. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 자바스크립트 -->
+  <script src="main.js"></script>
+</body>
+</html>
