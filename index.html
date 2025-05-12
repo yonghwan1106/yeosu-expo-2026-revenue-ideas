@@ -79,77 +79,42 @@
   </header>
   
   <!-- 히어로 섹션 -->
-  <section class="bg-gradient-to-r from-ocean to-island text-white py-16 md:py-24">
-    <div class="container mx-auto px-4">
+  <section class="hero-slideshow relative overflow-hidden py-16 md:py-24 text-white">
+    <!-- 슬라이드 배경 이미지들 -->
+    <div class="hero-slide" style="background-image: url('img/dolsan_bridge5.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('img/geomundo3.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('img/geumodo_1.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('img/odong2.jpg');"></div>
+    
+    <div class="container mx-auto px-4 relative z-10 hero-content">
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-8 md:mb-0">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 fade-in drop-shadow-lg">
             섬 투어 미식 패스포트
           </h1>
-          <h2 class="text-xl md:text-2xl mb-6 fade-in">
+          <h2 class="text-xl md:text-2xl mb-6 fade-in drop-shadow-md">
             Island Culinary Passport
           </h2>
-          <p class="text-lg mb-8 fade-in">
+          <p class="text-lg mb-8 fade-in max-w-lg backdrop-blur-sm bg-black bg-opacity-20 p-4 rounded-lg">
             여수의 아름다운 350여 개의 섬을 탐험하며 지역 특산물과 음식 문화를 체험하는 새로운 방식의 미식 관광 프로그램입니다.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 fade-in">
-            <a href="concept.html" class="bg-white text-ocean font-bold py-3 px-6 rounded-lg shadow-md hover:bg-gray-100 transition duration-300 text-center">
+            <a href="concept.html" class="bg-white text-ocean font-bold py-3 px-6 rounded-lg shadow-md hover:bg-gray-100 hover:scale-105 transition duration-300 text-center">
               자세히 알아보기
             </a>
-            <a href="passport.html" class="bg-secondary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-400 transition duration-300 text-center">
+            <a href="passport.html" class="bg-secondary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-400 hover:scale-105 transition duration-300 text-center">
               패스포트 살펴보기
             </a>
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
           <div class="passport-container w-80 h-96 fade-in">
-            <div class="passport relative w-full h-full transition-transform duration-700">
-              <div class="passport-front absolute w-full h-full bg-white rounded-xl shadow-xl overflow-hidden">
-                <div class="bg-sunset h-32 flex items-center justify-center">
-                  <h3 class="text-white text-2xl font-bold text-center">여수 섬 투어<br>미식 패스포트</h3>
-                </div>
-                <div class="p-6">
-                  <div class="border-b-2 border-gray-200 pb-4 mb-4">
-                    <p class="text-gray-600 mb-2">이름 / Name</p>
-                    <p class="font-medium">홍길동 / Hong Gil-dong</p>
-                  </div>
-                  <div class="border-b-2 border-gray-200 pb-4 mb-4">
-                    <p class="text-gray-600 mb-2">여권번호 / Passport No.</p>
-                    <p class="font-medium">YS-2026-00001</p>
-                  </div>
-                  <div>
-                    <p class="text-gray-600 mb-2">유효기간 / Valid Until</p>
-                    <p class="font-medium">2026.09.30</p>
-                  </div>
-                </div>
-              </div>
-              <div class="passport-back absolute w-full h-full bg-white rounded-xl shadow-xl overflow-hidden">
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-4 text-center">스탬프 컬렉션</h3>
-                  <div class="grid grid-cols-3 gap-4">
-                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-ocean border-2 border-dashed border-ocean">
-                      <span class="text-xs font-bold">돌산도</span>
-                    </div>
-                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-island border-2 border-dashed border-island">
-                      <span class="text-xs font-bold">거문도</span>
-                    </div>
-                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-sunset border-2 border-dashed border-sunset">
-                      <span class="text-xs font-bold">금오도</span>
-                    </div>
-                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-ocean border-2 border-dashed border-ocean">
-                      <span class="text-xs font-bold">낭도</span>
-                    </div>
-                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-island border-2 border-dashed border-island">
-                      <span class="text-xs font-bold">백야도</span>
-                    </div>
-                    <div class="stamp w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-sunset border-2 border-dashed border-sunset">
-                      <span class="text-xs font-bold">오동도</span>
-                    </div>
-                  </div>
-                  <p class="text-sm text-gray-500 mt-6 text-center">패스포트를 클릭하면 뒤집을 수 있습니다</p>
-                </div>
-              </div>
+            <div class="passport-svg-container">
+              <object id="passport-svg" type="image/svg+xml" data="img/passport-animated.svg" class="w-full h-full">
+                패스포트 이미지를 불러올 수 없습니다
+              </object>
             </div>
+            <p class="text-sm text-white text-center mt-3 backdrop-blur-sm bg-black bg-opacity-20 p-2 rounded-lg">패스포트를 클릭하면 뒤집을 수 있습니다</p>
           </div>
         </div>
       </div>
@@ -162,8 +127,8 @@
       <h2 class="text-3xl font-bold text-center mb-12 fade-in">섬 투어 미식 패스포트의 주요 특징</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- 카드 1 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-ocean slide-in-left">
-          <div class="w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+        <div class="feature-card ocean-card bg-white rounded-xl shadow-md p-6 slide-in-left">
+          <div class="icon-circle w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
             </svg>
@@ -175,8 +140,8 @@
         </div>
         
         <!-- 카드 2 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-island fade-in">
-          <div class="w-14 h-14 bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+        <div class="feature-card island-card bg-white rounded-xl shadow-md p-6 fade-in">
+          <div class="icon-circle w-14 h-14 bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -188,8 +153,8 @@
         </div>
         
         <!-- 카드 3 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-sunset slide-in-right">
-          <div class="w-14 h-14 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+        <div class="feature-card sunset-card bg-white rounded-xl shadow-md p-6 slide-in-right">
+          <div class="icon-circle w-14 h-14 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
             </svg>
@@ -201,8 +166,8 @@
         </div>
         
         <!-- 카드 4 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-ocean slide-in-left">
-          <div class="w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+        <div class="feature-card ocean-card bg-white rounded-xl shadow-md p-6 slide-in-left">
+          <div class="icon-circle w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
@@ -214,8 +179,8 @@
         </div>
         
         <!-- 카드 5 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-island fade-in">
-          <div class="w-14 h-14 bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+        <div class="feature-card island-card bg-white rounded-xl shadow-md p-6 fade-in">
+          <div class="icon-circle w-14 h-14 bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -227,8 +192,8 @@
         </div>
         
         <!-- 카드 6 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-sunset slide-in-right">
-          <div class="w-14 h-14 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+        <div class="feature-card sunset-card bg-white rounded-xl shadow-md p-6 slide-in-right">
+          <div class="icon-circle w-14 h-14 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
             </svg>
@@ -253,14 +218,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- 돌산도 -->
         <div class="island-card bg-white rounded-xl shadow-md overflow-hidden slide-in-left">
-          <div class="h-48 bg-ocean flex items-center justify-center overflow-hidden">
-            <div class="w-full h-full flex items-center justify-center bg-ocean text-white">
-              <div class="text-center p-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-                <h3 class="text-xl font-bold">돌산도</h3>
-              </div>
+          <div class="island-image-container">
+            <img src="img/dolsan_bridge2.jpg" alt="돌산도" class="island-image">
+            <div class="island-overlay">
+              <h3 class="text-xl font-bold">돌산도</h3>
             </div>
           </div>
           <div class="p-6">
@@ -277,14 +238,10 @@
         
         <!-- 거문도 -->
         <div class="island-card bg-white rounded-xl shadow-md overflow-hidden fade-in">
-          <div class="h-48 bg-island flex items-center justify-center overflow-hidden">
-            <div class="w-full h-full flex items-center justify-center bg-island text-white">
-              <div class="text-center p-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-                <h3 class="text-xl font-bold">거문도</h3>
-              </div>
+          <div class="island-image-container">
+            <img src="img/geomundo4.jpg" alt="거문도" class="island-image">
+            <div class="island-overlay">
+              <h3 class="text-xl font-bold">거문도</h3>
             </div>
           </div>
           <div class="p-6">
@@ -301,14 +258,10 @@
         
         <!-- 금오도 -->
         <div class="island-card bg-white rounded-xl shadow-md overflow-hidden slide-in-right">
-          <div class="h-48 bg-sunset flex items-center justify-center overflow-hidden">
-            <div class="w-full h-full flex items-center justify-center bg-sunset text-white">
-              <div class="text-center p-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-                <h3 class="text-xl font-bold">금오도</h3>
-              </div>
+          <div class="island-image-container">
+            <img src="img/geumodo_3.jpg" alt="금오도" class="island-image">
+            <div class="island-overlay">
+              <h3 class="text-xl font-bold">금오도</h3>
             </div>
           </div>
           <div class="p-6">
@@ -325,7 +278,7 @@
       </div>
       
       <div class="text-center mt-10">
-        <a href="islands.html" class="inline-flex items-center bg-ocean text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 fade-in">
+        <a href="islands.html" class="inline-flex items-center bg-ocean text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 hover:scale-105 transition duration-300 fade-in">
           모든 참여 섬 보기
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -390,7 +343,7 @@
       </div>
       
       <div class="text-center mt-10">
-        <a href="business.html" class="inline-flex items-center bg-sunset text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-orange-600 transition duration-300 fade-in">
+        <a href="business.html" class="inline-flex items-center bg-sunset text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-orange-600 hover:scale-105 transition duration-300 fade-in">
           자세한 사업 계획 보기
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -408,10 +361,10 @@
         섬 투어 미식 패스포트로 여수의 아름다운 섬과 풍부한 식문화를 세계에 알릴 수 있습니다.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
-        <a href="concept.html" class="bg-white text-ocean font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+        <a href="concept.html" class="bg-white text-ocean font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 hover:scale-105 transition duration-300">
           컨셉 자세히 알아보기
         </a>
-        <a href="business.html" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-green-400 transition duration-300">
+        <a href="business.html" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-green-400 hover:scale-105 transition duration-300">
           사업 계획 확인하기
         </a>
       </div>
@@ -459,5 +412,6 @@
 
   <!-- 자바스크립트 -->
   <script src="main.js"></script>
+  <script src="js/passport-animation.js"></script>
 </body>
 </html>

@@ -109,6 +109,105 @@ body {
   }
 }
 
+/* 히어로 이미지 슬라이드쇼 스타일 */
+.hero-slideshow {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slideshow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 향상된 카드 스타일 */
+.feature-card {
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.feature-card.ocean-card:hover {
+  border-top-color: var(--ocean-blue);
+  transform: translateY(-5px);
+}
+
+.feature-card.island-card:hover {
+  border-top-color: var(--island-green);
+  transform: translateY(-5px);
+}
+
+.feature-card.sunset-card:hover {
+  border-top-color: var(--sunset-orange);
+  transform: translateY(-5px);
+}
+
+.icon-circle {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-circle {
+  transform: scale(1.1);
+}
+
+/* 섬 프리뷰 카드 향상 스타일 */
+.island-card .island-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.island-card .island-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.island-card:hover .island-image {
+  transform: scale(1.05);
+}
+
+.island-card .island-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 70%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  color: white;
+}
+
 /* 섹션 전환 애니메이션 */
 .fade-in {
   animation: fadeIn 0.8s ease-in-out;
@@ -196,5 +295,72 @@ body {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/* 새로운 패스포트 SVG 애니메이션 스타일 */
+.passport-svg-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 1200px;
+}
+
+.passport-svg-container svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+.passport-container {
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.passport-container.clicked {
+  transform: rotateY(180deg);
+}
+
+/* 3D 효과를 위한 스타일 */
+.passport-container:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+.passport-container.clicked:hover {
+  transform: rotateY(170deg) rotateX(5deg);
+}
+
+/* 패스포트가 회전하는 동안의 그림자 효과 */
+.passport-container::after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.passport-container:hover::after {
+  opacity: 1;
+}
+
+/* 반응형 패스포트 사이즈 조정 */
+@media (max-width: 992px) {
+  .passport-svg-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .passport-svg-container {
+    max-width: 250px;
   }
 }

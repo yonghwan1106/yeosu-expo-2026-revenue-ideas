@@ -12,6 +12,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
+  // 여수 섹션 배경 이미지 슬라이드쇼 구현
+  const heroSlideshow = document.querySelector('.hero-slideshow');
+  if (heroSlideshow) {
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    
+    // 초기 슬라이드 표시
+    slides[currentSlide].classList.add('active');
+    
+    // 슬라이드 전환 함수
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    
+    // 5초마다 슬라이드 전환
+    setInterval(nextSlide, 5000);
+  }
+  
   // 현재 페이지 URL을 기반으로 네비게이션 링크에 active 클래스 추가
   const currentUrl = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-link');
