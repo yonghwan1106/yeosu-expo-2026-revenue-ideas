@@ -79,144 +79,356 @@
   </header>
   
   <!-- 페이지 제목 섹션 -->
-  <section class="bg-gradient-to-r from-ocean to-island text-white py-12">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl font-bold mb-2 fade-in">컨셉 소개</h1>
-      <p class="text-lg fade-in">섬 투어 미식 패스포트의 기본 개념과 배경</p>
+  <section class="bg-gradient-to-r from-ocean to-island text-white py-16 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+      <div class="absolute inset-0 bg-pattern"></div>
+    </div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="flex justify-center mb-4">
+        <img src="img/symbol_brand.jpg" alt="2026 여수세계섬박람회 심볼" class="h-16 md:h-20">
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">컨셉 소개</h1>
+      <p class="text-xl fade-in max-w-2xl mx-auto">섬 투어 미식 패스포트의 기본 개념과 배경</p>
+      
+      <div class="flex justify-center mt-8">
+        <div class="bg-white/20 backdrop-blur-sm py-3 px-6 rounded-full">
+          <div class="flex items-center space-x-2">
+            <img src="img/yeosu_ci/ci_01.jpg" alt="여수시 로고" class="h-8">
+            <span class="text-sm md:text-base font-medium">2026년 여수세계섬박람회 공식 프로그램</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   
   <!-- 소개 섹션 -->
   <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto">
-        <div class="mb-12 slide-in-left">
-          <h2 class="text-3xl font-bold mb-6 text-ocean">섬 투어 미식 패스포트란?</h2>
-          <p class="text-gray-700 mb-4">
-            섬 투어 미식 패스포트는 여수의 아름다운 350여 개의 섬을 탐험하며 지역 특산물과 음식 문화를 체험하는 통합 플랫폼입니다. 실물 패스포트와 모바일 앱을 결합한 듀얼 시스템으로, 방문객들이 각 섬의 특색 있는 미식 문화를 탐험하고 스탬프를 수집하면서 다양한 혜택을 받을 수 있는 프로그램입니다.
-          </p>
-          <p class="text-gray-700">
-            이는 단순한 관광이나 식사 체험을 넘어, 섬의 역사와 문화, 특산물의 생산부터 가공, 요리, 시식까지 전 과정을 체험하고 이해할 수 있는 종합적인 미식 관광 프로그램입니다. 스탬프 수집의 재미와 함께 섬 간 이동을 촉진하여 체류 시간 연장과 소비 활성화를 유도합니다.
-          </p>
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-8 mb-16">
+          <div class="md:w-1/2 slide-in-left">
+            <div class="relative mb-6">
+              <h2 class="text-3xl font-bold text-ocean inline-block">섬 투어 미식 패스포트란?</h2>
+              <div class="absolute -bottom-2 left-0 w-16 h-1 bg-ocean"></div>
+            </div>
+            <p class="text-gray-700 mb-4">
+              섬 투어 미식 패스포트는 여수의 아름다운 350여 개의 섬을 탐험하며 지역 특산물과 음식 문화를 체험하는 통합 플랫폼입니다. 실물 패스포트와 모바일 앱을 결합한 듀얼 시스템으로, 방문객들이 각 섬의 특색 있는 미식 문화를 탐험하고 스탬프를 수집하면서 다양한 혜택을 받을 수 있는 프로그램입니다.
+            </p>
+            <p class="text-gray-700">
+              이는 단순한 관광이나 식사 체험을 넘어, 섬의 역사와 문화, 특산물의 생산부터 가공, 요리, 시식까지 전 과정을 체험하고 이해할 수 있는 종합적인 미식 관광 프로그램입니다. 스탬프 수집의 재미와 함께 섬 간 이동을 촉진하여 체류 시간 연장과 소비 활성화를 유도합니다.
+            </p>
+          </div>
+          <div class="md:w-1/2 flex items-center justify-center slide-in-right">
+            <div class="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+              <img src="img/odong2.jpg" alt="여수 오동도 전경" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-xl font-bold mb-1">오동도</h3>
+                  <p class="text-sm">여수의 대표적인 섬 중 하나로, 동백꽃과 아름다운 해안 산책로로 유명합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
-        <div class="mb-12 fade-in">
-          <h2 class="text-3xl font-bold mb-6 text-island">제안 배경</h2>
-          <p class="text-gray-700 mb-4">
-            2026여수세계섬박람회는 여수의 풍부한 해양 자원과 350여 개의 섬을 활용한 글로벌 행사입니다. 최근 관광 트렌드 분석 결과, 단순 관람이 아닌 체험형 관광과 미식 관광이 크게 부상하고 있습니다.
-          </p>
-          <p class="text-gray-700 mb-4">
-            네이버 데이터랩 검색어 트렌드 분석에 따르면 '여수', '체험', '미식'에 대한 검색량이 지속적으로 상승하고 있으며, 특히 관광객들이 지역 특산물과 음식 문화에 높은 관심을 보이고 있습니다.
-          </p>
-          <p class="text-gray-700 mb-4">
-            여수는 돌산갓, 거문도 쑥, 멸치, 키조개, 게장 등 풍부한 특산물을 보유하고 있으나, 이를 체계적으로 경험할 수 있는 통합 플랫폼이 부재한 상황입니다. 이러한 배경에서 지역 특산물과 음식 문화를 활용한 새로운 형태의 관광 프로그램을 제안하게 되었습니다.
-          </p>
+        <div class="flex flex-col md:flex-row gap-8 mb-16">
+          <div class="md:w-1/2 order-2 md:order-1 flex items-center justify-center fade-in">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-sm border-l-4 border-island">
+              <div class="flex items-start mb-4">
+                <img src="img/mascot.jpg" alt="2026 여수세계섬박람회 마스코트" class="w-24 h-auto mr-4">
+                <div>
+                  <h3 class="text-lg font-bold text-island mb-2">트렌드 데이터</h3>
+                  <p class="text-sm text-gray-600">최근 여수 방문 관광객 검색어 분석</p>
+                </div>
+              </div>
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <div class="w-24 text-xs font-medium text-gray-500">체험 관광</div>
+                  <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-island to-green-400 rounded-full" style="width: 78%"></div>
+                  </div>
+                  <span class="ml-2 text-sm font-medium">78%</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="w-24 text-xs font-medium text-gray-500">미식 관광</div>
+                  <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-island to-green-400 rounded-full" style="width: 83%"></div>
+                  </div>
+                  <span class="ml-2 text-sm font-medium">83%</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="w-24 text-xs font-medium text-gray-500">섬 방문</div>
+                  <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-island to-green-400 rounded-full" style="width: 64%"></div>
+                  </div>
+                  <span class="ml-2 text-sm font-medium">64%</span>
+                </li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-4">※ 네이버 데이터랩 검색어 트렌드 분석 (2024.01-2024.12)</p>
+            </div>
+          </div>
+          <div class="md:w-1/2 order-1 md:order-2 fade-in">
+            <div class="relative mb-6">
+              <h2 class="text-3xl font-bold text-island inline-block">제안 배경</h2>
+              <div class="absolute -bottom-2 left-0 w-16 h-1 bg-island"></div>
+            </div>
+            <p class="text-gray-700 mb-4">
+              2026여수세계섬박람회는 여수의 풍부한 해양 자원과 350여 개의 섬을 활용한 글로벌 행사입니다. 최근 관광 트렌드 분석 결과, 단순 관람이 아닌 체험형 관광과 미식 관광이 크게 부상하고 있습니다.
+            </p>
+            <p class="text-gray-700 mb-4">
+              네이버 데이터랩 검색어 트렌드 분석에 따르면 '여수', '체험', '미식'에 대한 검색량이 지속적으로 상승하고 있으며, 특히 관광객들이 지역 특산물과 음식 문화에 높은 관심을 보이고 있습니다.
+            </p>
+            <p class="text-gray-700 mb-4">
+              여수는 돌산갓, 거문도 쑥, 멸치, 키조개, 게장 등 풍부한 특산물을 보유하고 있으나, 이를 체계적으로 경험할 수 있는 통합 플랫폼이 부재한 상황입니다. 이러한 배경에서 지역 특산물과 음식 문화를 활용한 새로운 형태의 관광 프로그램을 제안하게 되었습니다.
+            </p>
+          </div>
         </div>
         
         <div class="mb-12 slide-in-right">
-          <h2 class="text-3xl font-bold mb-6 text-sunset">사업 목적</h2>
-          <ul class="space-y-4 text-gray-700">
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-sunset mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>여수 인근 섬들의 다양한 특산물과 음식 문화를 체험할 수 있는 통합 플랫폼 구축</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-sunset mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>방문객의 섬 간 이동을 촉진하여 체류 시간 연장 및 소비 활성화 유도</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-sunset mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>지역 특산물 브랜드 가치 향상 및 지속가능한 식품 관광 생태계 조성</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-sunset mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>박람회 이후에도 여수의 대표 관광 콘텐츠로 발전 가능한 기반 마련</span>
-            </li>
-          </ul>
+          <div class="flex items-center justify-between mb-6">
+            <div class="relative">
+              <h2 class="text-3xl font-bold text-sunset inline-block">사업 목적</h2>
+              <div class="absolute -bottom-2 left-0 w-16 h-1 bg-sunset"></div>
+            </div>
+            <img src="img/emblem_img01.jpg" alt="여수 특산물" class="h-16 rounded-full border-4 border-white shadow-md hidden md:block">
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-sunset hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="h-6 w-6 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">통합 플랫폼 구축</h3>
+                  <p class="text-gray-700 text-sm">여수 인근 섬들의 다양한 특산물과 음식 문화를 체험할 수 있는 통합 플랫폼을 구축하여 방문객에게 풍부한 체험 기회 제공</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-sunset hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="h-6 w-6 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">소비 활성화 유도</h3>
+                  <p class="text-gray-700 text-sm">방문객의 섬 간 이동을 촉진하여 체류 시간 연장 및 소비 활성화를 유도함으로써 지역 경제 발전에 기여</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-sunset hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="h-6 w-6 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">브랜드 가치 향상</h3>
+                  <p class="text-gray-700 text-sm">지역 특산물 브랜드 가치 향상 및 지속가능한 식품 관광 생태계를 조성하여 장기적인 지역 발전 도모</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-sunset hover:shadow-md transition-shadow">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="h-6 w-6 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">지속가능한 관광 콘텐츠</h3>
+                  <p class="text-gray-700 text-sm">박람회 이후에도 여수의 대표 관광 콘텐츠로 발전 가능한 기반을 마련하여 박람회 유산의 지속가능성 확보</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   
   <!-- 핵심 컨셉 섹션 -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12 fade-in">핵심 컨셉 및 차별화 요소</h2>
+  <section class="py-16 bg-gray-50 relative">
+    <!-- 배경 패턴 -->
+    <div class="absolute inset-0 opacity-5">
+      <img src="img/geomundo3.jpg" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-ocean/40 to-island/40 mix-blend-overlay"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center justify-center mb-4">
+          <div class="w-12 h-1 bg-ocean rounded-full"></div>
+          <h2 class="text-3xl md:text-4xl font-bold px-4">핵심 컨셉 및 차별화 요소</h2>
+          <div class="w-12 h-1 bg-ocean rounded-full"></div>
+        </div>
+        <p class="text-gray-600 max-w-2xl mx-auto">여수 세계 섬 박람회의 미식 패스포트만의 특별한 가치를 제공합니다</p>
+      </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         <!-- 컨셉 1 -->
-        <div class="flex slide-in-left">
-          <div class="mr-4 flex-shrink-0">
-            <div class="w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-              </svg>
+        <div class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-ocean transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl slide-in-left">
+          <div class="flex items-start">
+            <div class="mr-5 flex-shrink-0">
+              <div class="w-16 h-16 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2 text-ocean">패스포트 개념</h3>
-            <p class="text-gray-700">
-              실물 패스포트와 모바일 앱을 결합한 듀얼 시스템으로 스탬프 수집의 재미를 제공합니다. 아날로그적인 수집 만족감과 디지털 편의성을 동시에 누릴 수 있습니다. 각 섬을 방문할 때마다 독특한 디자인의 스탬프를 받아 추억을 만들고, 앱으로는 방문 이력과 혜택을 쉽게 관리할 수 있습니다.
-            </p>
+            <div>
+              <h3 class="text-xl font-bold mb-3 text-ocean">패스포트 개념</h3>
+              <p class="text-gray-700 mb-4">
+                실물 패스포트와 모바일 앱을 결합한 듀얼 시스템으로 스탬프 수집의 재미를 제공합니다. 아날로그적인 수집 만족감과 디지털 편의성을 동시에 누릴 수 있습니다.
+              </p>
+              <div class="mt-2 flex items-center">
+                <img src="img/passport-animated.svg" alt="패스포트 예시" class="w-16 h-16 mr-2 border border-gray-200 rounded-lg">
+                <div class="text-sm text-gray-600">
+                  다양한 디자인의 스탬프로 개성 있는 여행 기록을 만들어보세요
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
         <!-- 컨셉 2 -->
-        <div class="flex fade-in">
-          <div class="mr-4 flex-shrink-0">
-            <div class="w-14 h-14 bg-island bg-opacity-10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
-              </svg>
+        <div class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-island transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl fade-in">
+          <div class="flex items-start">
+            <div class="mr-5 flex-shrink-0">
+              <div class="w-16 h-16 bg-island bg-opacity-10 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+                </svg>
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2 text-island">특산물 연계</h3>
-            <p class="text-gray-700">
-              각 섬의 대표 특산물을 체험, 시식, 구매까지 연결하는 원스톱 경험을 제공합니다. 특산물의 생산 과정을 직접 체험하고, 전문가의 도움으로 요리를 만들어 시식한 후, 원하는 제품을 구매할 수 있습니다. 이를 통해 지역 특산물에 대한 이해를 높이고 직접적인 경제 효과를 창출합니다.
-            </p>
+            <div>
+              <h3 class="text-xl font-bold mb-3 text-island">특산물 연계</h3>
+              <p class="text-gray-700 mb-4">
+                각 섬의 대표 특산물을 체험, 시식, 구매까지 연결하는 원스톱 경험을 제공합니다. 특산물의 생산 과정을 직접 체험하고, 전문가의 도움으로 요리를 만들어 시식할 수 있습니다.
+              </p>
+              <div class="mt-2 flex items-center">
+                <img src="img/emblem_img01.jpg" alt="여수 특산물" class="w-16 h-16 object-cover mr-2 rounded-full border-2 border-white shadow">
+                <div class="text-sm text-gray-600">
+                  돌산갓, 거문도 쑥, 여수 멸치 등 대표 특산물을 직접 체험해보세요
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
         <!-- 컨셉 3 -->
-        <div class="flex slide-in-left">
-          <div class="mr-4 flex-shrink-0">
-            <div class="w-14 h-14 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-              </svg>
+        <div class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-sunset transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl slide-in-left">
+          <div class="flex items-start">
+            <div class="mr-5 flex-shrink-0">
+              <div class="w-16 h-16 bg-sunset bg-opacity-10 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                </svg>
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2 text-sunset">인센티브 체계</h3>
-            <p class="text-gray-700">
-              스탬프 수 달성에 따른 단계별 보상으로 참여 동기를 부여합니다. 3개, 5개, 8개, 10개, 15개 이상 등 달성 단계별로 할인 쿠폰, 기념품, 특산물 미니 세트, 한정판 굿즈, VIP 인증서 등 다양한 혜택을 제공합니다. 이를 통해 방문객들이 더 많은 섬을 방문하도록 유도하고, 참여의 즐거움을 높입니다.
-            </p>
+            <div>
+              <h3 class="text-xl font-bold mb-3 text-sunset">인센티브 체계</h3>
+              <p class="text-gray-700 mb-4">
+                스탬프 수 달성에 따른 단계별 보상으로 참여 동기를 부여합니다. 3개, 5개, 8개, 10개, 15개 이상 등 달성 단계별로 할인 쿠폰, 기념품, 특산물 미니 세트, 한정판 굿즈, VIP 인증서 등 다양한 혜택을 제공합니다.
+              </p>
+              <div class="flex justify-between items-center mt-2 bg-gray-50 p-2 rounded-lg">
+                <div class="text-xs text-center">
+                  <div class="w-8 h-8 mx-auto bg-ocean/20 rounded-full flex items-center justify-center text-ocean font-bold mb-1">3</div>
+                  <div>할인 쿠폰</div>
+                </div>
+                <div class="text-xs text-center">
+                  <div class="w-8 h-8 mx-auto bg-island/20 rounded-full flex items-center justify-center text-island font-bold mb-1">5</div>
+                  <div>기념품</div>
+                </div>
+                <div class="text-xs text-center">
+                  <div class="w-8 h-8 mx-auto bg-sunset/20 rounded-full flex items-center justify-center text-sunset font-bold mb-1">8</div>
+                  <div>미니 세트</div>
+                </div>
+                <div class="text-xs text-center">
+                  <div class="w-8 h-8 mx-auto bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold mb-1">10</div>
+                  <div>한정 굿즈</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
         <!-- 컨셉 4 -->
-        <div class="flex slide-in-right">
-          <div class="mr-4 flex-shrink-0">
-            <div class="w-14 h-14 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
+        <div class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-ocean transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl slide-in-right">
+          <div class="flex items-start">
+            <div class="mr-5 flex-shrink-0">
+              <div class="w-16 h-16 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-3 text-ocean">스토리텔링</h3>
+              <p class="text-gray-700 mb-4">
+                각 섬과 특산물의 역사, 문화적 배경을 스토리텔링으로 제공합니다. 패스포트와 앱에는 각 섬과 특산물에 대한 흥미로운 이야기가 담겨 있어, 단순한 관광을 넘어 섬 문화에 대한 이해를 높입니다.
+              </p>
+              <div class="mt-2 flex">
+                <div class="flex-1 border-l-2 border-ocean pl-3">
+                  <p class="text-sm italic text-gray-600">"거문도 쑥은 일제강점기에 섬주민들의 생계를 지켜준 귀한 자원이었습니다. 청정 해풍을 맞고 자란 쑥의 특별한 향과 효능은 지금까지도 많은 사람들에게 사랑받고 있습니다."</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2 text-ocean">스토리텔링</h3>
-            <p class="text-gray-700">
-              각 섬과 특산물의 역사, 문화적 배경을 스토리텔링으로 제공합니다. 패스포트와 앱에는 각 섬과 특산물에 대한 흥미로운 이야기가 담겨 있어, 단순한 관광을 넘어 섬 문화에 대한 이해를 높입니다. 예를 들어, 거문도 쑥의 역사적 배경, 낭도 젖샘 막걸리의 유래 등 각 특산물에 얽힌 이야기를 통해 더욱 풍부한 체험을 제공합니다.
-            </p>
+        </div>
+      </div>
+      
+      <div class="mt-12 flex justify-center">
+        <div class="bg-white shadow-md rounded-xl p-6 max-w-3xl relative">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2">
+            <img src="img/mascot.jpg" alt="여수 세계 섬 박람회 마스코트" class="h-16 inline-block rounded border-2 border-white">
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-xl font-bold mb-3">여수만의 차별화된 미식 관광</h3>
+            <p class="text-gray-600 mb-4">세계 최초로 섬의 지리적 특성과 미식 문화를 결합한 관광 프로그램으로, 여수만의 독특한 경험을 제공합니다.</p>
+            <div class="flex justify-center space-x-6 mt-2">
+              <div class="text-center">
+                <div class="w-12 h-12 mx-auto bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-2">
+                  <svg class="h-6 w-6 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+                <div class="text-sm">아날로그 & 디지털</div>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 mx-auto bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-2">
+                  <svg class="h-6 w-6 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 22V12h6v10" />
+                  </svg>
+                </div>
+                <div class="text-sm">지역문화 체험</div>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 mx-auto bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-2">
+                  <svg class="h-6 w-6 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="text-sm">경제효과</div>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-2">
+                  <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="text-sm">지속가능성</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -226,149 +438,231 @@
   <!-- 트렌드 분석 섹션 -->
   <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12 fade-in">시장 트렌드 분석</h2>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">시장 트렌드 분석</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">미식 패스포트가 미래 관광 트렌드에 부합하는 이유</p>
+      </div>
       
-      <div class="max-w-4xl mx-auto">
-        <div class="mb-12 slide-in-left">
-          <h3 class="text-2xl font-bold mb-4 text-ocean">미식 관광 트렌드 상승</h3>
-          <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-            <p class="text-gray-700 mb-4">
-              한국관광공사의 '2025 관광컨설팅 이슈 발굴'에 따르면 미식 여행이 국내 관광시장의 주요 트렌드로 부상하고 있습니다.
-            </p>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>2023 국민여행조사 결과, 여행지 활동 중 미식관광이 60.2%로 3위 차지</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>외래관광객조사에서 한국 여행 결정 요인 및 만족도 1위가 '식도락 관광'</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>지역 특산물에 대한 관심 증가로 현지 식료품점 방문이 주요 관광 코스로 부상</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>체험과 식도락을 결합한 '바다에서 식탁까지(Sea to Table)' 형태의 프로그램 인기</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="mb-12 fade-in">
-          <h3 class="text-2xl font-bold mb-4 text-island">체험형 관광의 중요성</h3>
-          <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-            <p class="text-gray-700 mb-4">
-              최근 관광 트렌드는 단순 관람 위주의 관광에서 체험과 참여 중심의 관광으로 변화하고 있습니다.
-            </p>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>MZ세대를 중심으로 경험의 가치를 중시하는 소비 패턴 확산</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>SNS 공유를 위한 독특하고 특별한 체험 수요 증가</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>지역 문화와 정서를 직접 경험하는 '진정성 있는 여행' 선호</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                <span>코로나19 이후 소규모, 야외 중심의 체험 프로그램 인기</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="slide-in-right">
-          <h3 class="text-2xl font-bold mb-4 text-sunset">유사 사례 분석</h3>
-          <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-            <p class="text-gray-700 mb-4">
-              국내외 성공적인 미식 관광 사례를 분석하고 그 장점을 반영하되, 여수만의 차별화된 특성을 살린 프로그램을 구상했습니다.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 class="font-bold text-lg mb-2">국내 사례</h4>
-                <ul class="space-y-2 text-gray-700">
-                  <li class="flex items-start">
-                    <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <span>전주 한옥마을 맛 지도와 식도락 여행 패키지</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <span>강원도 양양 '서피비치 푸드패스포트'</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg mb-2">해외 사례</h4>
-                <ul class="space-y-2 text-gray-700">
-                  <li class="flex items-start">
-                    <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <span>일본 홋카이도 '미식여행 패스포트'</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                    <span>이탈리아 토스카나 지역 '와인 패스포트'</span>
-                  </li>
-                </ul>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- 트렌드 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden slide-in-left">
+            <div class="h-48 relative overflow-hidden">
+              <img src="img/geumodo_3.jpg" alt="미식 관광 트렌드" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-ocean/80 to-transparent flex items-end">
+                <div class="p-4 text-white">
+                  <h3 class="text-xl font-bold">미식 관광 트렌드 상승</h3>
+                </div>
               </div>
             </div>
-            <div class="mt-4">
-              <h4 class="font-bold text-lg mb-2">차별화 전략</h4>
-              <ul class="space-y-2 text-gray-700">
+            <div class="p-6">
+              <div class="mb-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-500">관광객 관심도</span>
+                  <span class="text-sm font-medium text-ocean">83%</span>
+                </div>
+                <div class="h-2.5 bg-gray-200 rounded-full">
+                  <div class="h-2.5 rounded-full bg-ocean" style="width: 83%"></div>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700 text-sm">
                 <li class="flex items-start">
-                  <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="h-5 w-5 text-ocean mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>섬이라는 독특한 지리적 특성 활용</span>
+                  <span>2023 국민여행조사 결과, 여행지 활동 중 미식관광이 60.2%로 3위 차지</span>
                 </li>
                 <li class="flex items-start">
-                  <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="h-5 w-5 text-ocean mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>디지털과 아날로그 경험을 결합한 듀얼 시스템</span>
+                  <span>외래관광객조사에서 한국 여행 결정 요인 및 만족도 1위가 '식도락 관광'</span>
                 </li>
                 <li class="flex items-start">
-                  <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="h-5 w-5 text-ocean mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>단순 식사가 아닌 생산-가공-요리-시식의 전 과정 체험 제공</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                  <span>박람회라는 대규모 행사와 연계한 스케일과 다양성</span>
+                  <span>'바다에서 식탁까지(Sea to Table)' 형태의 프로그램 인기 급상승</span>
                 </li>
               </ul>
+              <div class="mt-6 flex items-center text-ocean">
+                <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-sm">한국관광공사 '2025 관광컨설팅 이슈 발굴' 참고</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 트렌드 2 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="h-48 relative overflow-hidden">
+              <img src="img/dolsan_bridge5.jpg" alt="체험형 관광" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-island/80 to-transparent flex items-end">
+                <div class="p-4 text-white">
+                  <h3 class="text-xl font-bold">체험형 관광의 중요성</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="mb-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-500">참여 선호도</span>
+                  <span class="text-sm font-medium text-island">78%</span>
+                </div>
+                <div class="h-2.5 bg-gray-200 rounded-full">
+                  <div class="h-2.5 rounded-full bg-island" style="width: 78%"></div>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-island mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span>MZ세대를 중심으로 경험의 가치를 중시하는 소비 패턴 확산</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-island mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span>SNS 공유를 위한 독특하고 특별한 체험 수요 증가</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-island mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span>지역 문화와 정서를 직접 경험하는 '진정성 있는 여행' 선호</span>
+                </li>
+              </ul>
+              <div class="mt-6 flex items-center text-island">
+                <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-sm">2023 국민여행조사 및 트렌드 분석 기반</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 트렌드 3 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden slide-in-right">
+            <div class="h-48 relative overflow-hidden">
+              <img src="img/geomundo3.jpg" alt="유사 사례 분석" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-sunset/80 to-transparent flex items-end">
+                <div class="p-4 text-white">
+                  <h3 class="text-xl font-bold">유사 사례 분석 및 차별화</h3>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-2 mb-4">
+                <div class="flex flex-col">
+                  <h4 class="font-bold text-sm mb-2 text-sunset">국내 사례</h4>
+                  <ul class="space-y-1.5 text-gray-700 text-xs">
+                    <li class="flex items-start">
+                      <svg class="h-4 w-4 text-sunset mr-1 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>전주 한옥마을 맛 지도</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="h-4 w-4 text-sunset mr-1 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>양양 '서피비치 푸드패스포트'</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col">
+                  <h4 class="font-bold text-sm mb-2 text-sunset">해외 사례</h4>
+                  <ul class="space-y-1.5 text-gray-700 text-xs">
+                    <li class="flex items-start">
+                      <svg class="h-4 w-4 text-sunset mr-1 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>일본 홋카이도 '미식여행 패스포트'</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="h-4 w-4 text-sunset mr-1 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>이탈리아 '와인 패스포트'</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-2">
+                <h4 class="font-bold text-sm mb-2 text-sunset border-b border-sunset/20 pb-1">차별화 전략</h4>
+                <ul class="space-y-2 text-gray-700 text-sm">
+                  <li class="flex items-start">
+                    <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>섬이라는 독특한 지리적 특성 활용</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="h-5 w-5 text-sunset mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>생산-가공-요리-시식의 전 과정 체험</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-6 flex items-center text-sunset">
+                <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-sm">식도락 관광 벤치마킹 자료 기반</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 트렌드 요약 -->
+        <div class="mt-12 bg-gray-50 rounded-xl p-8 shadow-sm">
+          <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="md:w-1/3">
+              <div class="flex justify-center">
+                <img src="img/yeosu_ci/ci_01.jpg" alt="여수시 로고" class="h-20 mb-4">
+              </div>
+              <div class="text-center mb-4">
+                <h3 class="text-xl font-bold mb-2">여수 관광의 새로운 패러다임</h3>
+                <p class="text-sm text-gray-600">미식과 체험이 결합된 형태의 관광 상품이 미래 관광 시장을 선도할 것으로 전망됩니다.</p>
+              </div>
+            </div>
+            
+            <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-ocean/10 rounded-full flex items-center justify-center mb-2">
+                  <svg class="h-6 w-6 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-sm">연간 방문객</h4>
+                <p class="text-xl font-bold text-ocean">150만명+</p>
+                <p class="text-xs text-gray-500 mt-1">예상 섬 관광객</p>
+              </div>
+              
+              <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-island/10 rounded-full flex items-center justify-center mb-2">
+                  <svg class="h-6 w-6 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-sm">경제 효과</h4>
+                <p class="text-xl font-bold text-island">1,000억원+</p>
+                <p class="text-xs text-gray-500 mt-1">지역 경제 파급효과</p>
+              </div>
+              
+              <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-sunset/10 rounded-full flex items-center justify-center mb-2">
+                  <svg class="h-6 w-6 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-sm">지역 참여</h4>
+                <p class="text-xl font-bold text-sunset">600+</p>
+                <p class="text-xs text-gray-500 mt-1">참여 지역 업체 수</p>
+              </div>
             </div>
           </div>
         </div>
@@ -377,19 +671,42 @@
   </section>
   
   <!-- CTA 섹션 -->
-  <section class="py-16 bg-gradient-to-r from-ocean to-island text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6 fade-in">미식으로 연결되는 여수의 섬</h2>
+  <section class="py-20 bg-gradient-to-r from-ocean to-island text-white relative overflow-hidden">
+    <!-- 배경 패턴 -->
+    <div class="absolute inset-0 opacity-20">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <defs>
+          <pattern id="wave-pattern" width="100" height="50" patternUnits="userSpaceOnUse">
+            <path fill="none" stroke="#FFFFFF" stroke-width="1" 
+                  d="M0,25 C20,10 30,40 50,25 C70,10 80,40 100,25" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wave-pattern)" />
+      </svg>
+    </div>
+    
+    <!-- 마스코트 이미지 -->
+    <div class="absolute -bottom-2 right-0 md:right-24 lg:right-48 w-32 md:w-40 opacity-70">
+      <img src="img/mascot.jpg" alt="여수 세계 섬 박람회 마스코트" class="w-full h-auto">
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <img src="img/emblem_img01.jpg" alt="여수 특산물" class="h-16 mx-auto rounded-full border-4 border-white/30 shadow-xl inline-block mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 fade-in">미식으로 연결되는 여수의 섬</h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto fade-in">
         여수의 350여 개 섬과 풍부한 특산물, 그리고 다양한 음식 문화를 직접 경험해보세요.
       </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
-        <a href="passport.html" class="bg-white text-ocean font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+      <div class="flex flex-col sm:flex-row justify-center gap-6 fade-in">
+        <a href="passport.html" class="bg-white text-ocean font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-300 transform hover:scale-105">
           패스포트 살펴보기
         </a>
-        <a href="islands.html" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-green-400 transition duration-300">
+        <a href="islands.html" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-green-400 transition duration-300 transform hover:scale-105">
           참여 섬 알아보기
         </a>
+      </div>
+      <div class="mt-12 inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm">
+        <img src="img/yeosu_ci/ci_01.jpg" alt="여수시 로고" class="h-6 mr-2">
+        <span>여수세계섬박람회 공식 프로그램</span>
       </div>
     </div>
   </section>
