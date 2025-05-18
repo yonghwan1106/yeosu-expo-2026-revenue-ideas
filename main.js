@@ -2,6 +2,13 @@
 
 // 문서가 완전히 로드된 후 실행
 document.addEventListener('DOMContentLoaded', function() {
+  // 차트 초기화
+  initRoiChart();
+  initRevenueChart();
+  
+  // 카운트업 애니메이션 초기화
+  initCountUpAnimations();
+  
   // 모바일 메뉴 토글
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -188,6 +195,95 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// ROI 도넛 차트
+function initRoiChart() {
+  const roiChartEl = document.getElementById('roiChart');
+  if (roiChartEl) {
+    new Chart(roiChartEl, {
+      type: 'doughnut',
+      data: {
+        labels: ['초기 투자', 'ROI 성장'],
+        datasets: [{
+          data: [1, 8.84], // 1:8.84 비율 (884% ROI)
+          backgroundColor: ['#0369A1', '#047857'],
+          borderWidth: 0,
+          borderRadius: 5
+        }]
+      },
+      options: {
+        cutout: '70%',
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                if (context.dataIndex === 0) {
+                  return '초기 투자: 9,500만원';
+                } else {
+                  return '수익 증가: 8.4억원';
+                }
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+}
+
+// 수익 모델 막대 그래프
+function initRevenueChart() {
+  const revenueChartEl = document.getElementById('revenueChart');
+  if (revenueChartEl) {
+    new Chart(revenueChartEl, {
+      type: 'bar',
+      data: {
+        labels: ['패스포트 판매', '참여 업체 등록비', '프리미엄 패스포트', '한정판 패스포트', '판매 수수료', '제휴 상품', '특산물 세트', '부가 수익'],
+        datasets: [{
+          label: '예상 수익 (만원)',
+          data: [15000, 1000, 10000, 3000, 22500, 20000, 15000, 1500],
+          backgroundColor: [
+            '#0369A1', '#0284c7', '#0ea5e9', 
+            '#047857', '#059669', '#10b981',
+            '#EA580C', '#f97316'
+          ],
+          borderWidth: 0,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString() + '만원';
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let value = context.raw.toLocaleString();
+                return context.dataset.label + ': ' + value + '만원';
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+}
 
 // 구글 지도 API 콜백 함수 (islands.html 페이지용)
 function initMap() {

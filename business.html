@@ -18,6 +18,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   
+  <!-- Chart.js 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
   <!-- Tailwind Config -->
   <script>
     tailwind.config = {
@@ -123,6 +126,9 @@
                 </p>
               </div>
             </div>
+          </div>
+          <div class="mt-6">
+            <canvas id="revenueChart" height="150"></canvas>
           </div>
         </div>
         
@@ -338,9 +344,14 @@
                   <p class="text-lg font-bold">박람회 개막 후 약 30일 이내</p>
                 </div>
                 <div>
-                  <p class="text-gray-700 mb-2">투자수익률(ROI)</p>
-                  <p class="text-lg font-bold">884%</p>
+                <p class="text-gray-700 mb-2">투자수익률(ROI)</p>
+                <p class="text-lg font-bold">884%</p>
+                  <div class="mt-4 flex justify-center">
+                  <div style="width: 250px; height: 250px;">
+                    <canvas id="roiChart" width="200" height="200"></canvas>
+                  </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -452,25 +463,49 @@
       <h2 class="text-3xl font-bold text-center mb-12 fade-in">단계별 추진 일정</h2>
       
       <div class="max-w-4xl mx-auto">
-        <div class="relative">
+        <div class="relative timeline-container">
           <!-- 타임라인 라인 -->
-          <div class="absolute top-0 bottom-0 left-8 md:left-1/2 w-1 bg-gray-200 transform -translate-x-1/2"></div>
+          <div class="absolute top-0 bottom-0 left-8 md:left-1/2 w-1 bg-gradient-to-b from-ocean via-island to-sunset transform -translate-x-1/2"></div>
           
           <!-- 1단계 -->
           <div class="mb-16 relative">
             <div class="flex flex-col md:flex-row items-center">
               <div class="flex-1 md:text-right md:pr-8 order-2 md:order-1 slide-in-left">
                 <h3 class="text-xl font-bold text-ocean mb-2">1단계: 기획 및 준비</h3>
-                <p class="text-gray-600 mb-2">박람회 12개월 전</p>
-                <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
+                <p class="text-gray-600 mb-2 flex items-center justify-end">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  박람회 12개월 전
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 shadow-sm border-l-4 border-ocean transition-all duration-300 hover:shadow-md">
                   <ul class="text-gray-700 text-sm space-y-2">
-                    <li>• 콘셉트 확정 및 참여 업체 모집 계획 수립</li>
-                    <li>• 패스포트 디자인 및 앱 개발 착수</li>
-                    <li>• 특산물 및 체험 프로그램 표준화 작업</li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-ocean flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>콘셉트 확정 및 참여 업체 모집 계획 수립</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-ocean flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>패스포트 디자인 및 앱 개발 착수</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-ocean flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>특산물 및 체험 프로그램 표준화 작업</span>
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div class="w-16 h-16 bg-ocean rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2">1</div>
+              <div class="timeline-circle w-16 h-16 bg-ocean rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2 transform transition-transform duration-300 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </div>
               <div class="flex-1 md:pl-8 space-y-2 order-3"></div>
             </div>
           </div>
@@ -479,15 +514,39 @@
           <div class="mb-16 relative">
             <div class="flex flex-col md:flex-row items-center">
               <div class="flex-1 md:pr-8 order-2 md:order-1"></div>
-              <div class="w-16 h-16 bg-island rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2">2</div>
+              <div class="timeline-circle w-16 h-16 bg-island rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2 transform transition-transform duration-300 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
               <div class="flex-1 md:pl-8 space-y-2 order-3 slide-in-right">
                 <h3 class="text-xl font-bold text-island mb-2">2단계: 참여 업체 선정 및 교육</h3>
-                <p class="text-gray-600 mb-2">박람회 6개월 전</p>
-                <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
+                <p class="text-gray-600 mb-2 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  박람회 6개월 전
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 shadow-sm border-l-4 border-island transition-all duration-300 hover:shadow-md">
                   <ul class="text-gray-700 text-sm space-y-2">
-                    <li>• 참여 업체 공개 모집 및 심사</li>
-                    <li>• 선정 업체 대상 운영 교육 및 매뉴얼 배포</li>
-                    <li>• 표준화된 체험 프로그램 확정</li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-island flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>참여 업체 공개 모집 및 심사</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-island flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>선정 업체 대상 운영 교육 및 매뉴얼 배포</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-island flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>표준화된 체험 프로그램 확정</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -499,16 +558,40 @@
             <div class="flex flex-col md:flex-row items-center">
               <div class="flex-1 md:text-right md:pr-8 order-2 md:order-1 slide-in-left">
                 <h3 class="text-xl font-bold text-sunset mb-2">3단계: 시스템 구축 및 테스트</h3>
-                <p class="text-gray-600 mb-2">박람회 3개월 전</p>
-                <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
+                <p class="text-gray-600 mb-2 flex items-center justify-end">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  박람회 3개월 전
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 shadow-sm border-l-4 border-sunset transition-all duration-300 hover:shadow-md">
                   <ul class="text-gray-700 text-sm space-y-2">
-                    <li>• 패스포트 제작 및 앱 테스트 완료</li>
-                    <li>• 시범 운영 및 피드백 수렴</li>
-                    <li>• 참여 업체 최종 점검</li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sunset flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>패스포트 제작 및 앱 테스트 완료</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sunset flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>시범 운영 및 피드백 수렴</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sunset flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>참여 업체 최종 점검</span>
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div class="w-16 h-16 bg-sunset rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2">3</div>
+              <div class="timeline-circle w-16 h-16 bg-sunset rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2 transform transition-transform duration-300 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
               <div class="flex-1 md:pl-8 space-y-2 order-3"></div>
             </div>
           </div>
@@ -517,15 +600,39 @@
           <div class="mb-16 relative">
             <div class="flex flex-col md:flex-row items-center">
               <div class="flex-1 md:pr-8 order-2 md:order-1"></div>
-              <div class="w-16 h-16 bg-ocean rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2">4</div>
+              <div class="timeline-circle w-16 h-16 bg-ocean rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2 transform transition-transform duration-300 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                </svg>
+              </div>
               <div class="flex-1 md:pl-8 space-y-2 order-3 slide-in-right">
                 <h3 class="text-xl font-bold text-ocean mb-2">4단계: 홍보 및 사전 예약</h3>
-                <p class="text-gray-600 mb-2">박람회 1개월 전</p>
-                <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
+                <p class="text-gray-600 mb-2 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  박람회 1개월 전
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 shadow-sm border-l-4 border-ocean transition-all duration-300 hover:shadow-md">
                   <ul class="text-gray-700 text-sm space-y-2">
-                    <li>• 온/오프라인 홍보 캠페인 실시</li>
-                    <li>• 사전 예약 시스템 오픈</li>
-                    <li>• 프리미엄 패스포트 선판매 시작</li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-ocean flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>온/오프라인 홍보 캠페인 실시</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-ocean flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>사전 예약 시스템 오픈</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-ocean flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>프리미엄 패스포트 선판매 시작</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -537,16 +644,40 @@
             <div class="flex flex-col md:flex-row items-center">
               <div class="flex-1 md:text-right md:pr-8 order-2 md:order-1 slide-in-left">
                 <h3 class="text-xl font-bold text-island mb-2">5단계: 본 운영</h3>
-                <p class="text-gray-600 mb-2">박람회 기간</p>
-                <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
+                <p class="text-gray-600 mb-2 flex items-center justify-end">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  박람회 기간
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 shadow-sm border-l-4 border-island transition-all duration-300 hover:shadow-md">
                   <ul class="text-gray-700 text-sm space-y-2">
-                    <li>• 일일 모니터링 및 실시간 문제 해결</li>
-                    <li>• 중간 평가 및 운영 조정</li>
-                    <li>• 긴급 대응팀 상시 운영</li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-island flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>일일 모니터링 및 실시간 문제 해결</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-island flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>중간 평가 및 운영 조정</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-island flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>긴급 대응팀 상시 운영</span>
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div class="w-16 h-16 bg-island rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2">5</div>
+              <div class="timeline-circle w-16 h-16 bg-island rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2 transform transition-transform duration-300 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
               <div class="flex-1 md:pl-8 space-y-2 order-3"></div>
             </div>
           </div>
@@ -555,15 +686,39 @@
           <div class="relative">
             <div class="flex flex-col md:flex-row items-center">
               <div class="flex-1 md:pr-8 order-2 md:order-1"></div>
-              <div class="w-16 h-16 bg-sunset rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2">6</div>
+              <div class="timeline-circle w-16 h-16 bg-sunset rounded-full border-4 border-white shadow flex items-center justify-center text-white text-xl font-bold z-10 mb-4 md:mb-0 order-1 md:order-2 transform transition-transform duration-300 hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
               <div class="flex-1 md:pl-8 space-y-2 order-3 slide-in-right">
                 <h3 class="text-xl font-bold text-sunset mb-2">6단계: 사후 관리</h3>
-                <p class="text-gray-600 mb-2">박람회 종료 후</p>
-                <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
+                <p class="text-gray-600 mb-2 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  박람회 종료 후
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 shadow-sm border-l-4 border-sunset transition-all duration-300 hover:shadow-md">
                   <ul class="text-gray-700 text-sm space-y-2">
-                    <li>• 성과 평가 및 보고서 작성</li>
-                    <li>• 지속 운영 방안 수립</li>
-                    <li>• 여수시 관광 상품으로 통합 관리</li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sunset flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>성과 평가 및 보고서 작성</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sunset flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>지속 운영 방안 수립</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sunset flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span>여수시 관광 상품으로 통합 관리</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -580,6 +735,61 @@
       <h2 class="text-3xl font-bold text-center mb-12 fade-in">경제적 파급 효과</h2>
       
       <div class="max-w-5xl mx-auto">
+        <!-- 도입부 - 경제 효과 요약 인포그래픽 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg mb-12 fade-in">
+          <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">예상 경제 효과 <span class="text-sunset">한눈에 보기</span></h3>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <!-- 직접 수익 -->
+            <div class="p-4 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 shadow-sm transform transition-transform hover:scale-105">
+              <div class="w-16 h-16 mx-auto bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p class="font-bold text-xl text-gray-800 mb-2">직접 수익</p>
+              <p class="text-3xl font-bold text-ocean mb-1 count-up" data-count="935">935</p>
+              <p class="text-gray-600">백만원</p>
+            </div>
+            
+            <!-- 일자리 창출 -->
+            <div class="p-4 rounded-lg bg-gradient-to-br from-green-50 to-green-100 shadow-sm transform transition-transform hover:scale-105">
+              <div class="w-16 h-16 mx-auto bg-island bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-island" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <p class="font-bold text-xl text-gray-800 mb-2">일자리 창출</p>
+              <p class="text-3xl font-bold text-island mb-1 count-up" data-count="200">200</p>
+              <p class="text-gray-600">명</p>
+            </div>
+            
+            <!-- 매출 증가 -->
+            <div class="p-4 rounded-lg bg-gradient-to-br from-yellow-50 to-yellow-100 shadow-sm transform transition-transform hover:scale-105">
+              <div class="w-16 h-16 mx-auto bg-sunset bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-sunset" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <p class="font-bold text-xl text-gray-800 mb-2">매출 증가</p>
+              <p class="text-3xl font-bold text-sunset mb-1 count-up" data-count="30">30</p>
+              <p class="text-gray-600">%</p>
+            </div>
+            
+            <!-- 총 경제 효과 -->
+            <div class="p-4 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 shadow-sm transform transition-transform hover:scale-105">
+              <div class="w-16 h-16 mx-auto bg-purple-500 bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <p class="font-bold text-xl text-gray-800 mb-2">총 경제 효과</p>
+              <p class="text-3xl font-bold text-purple-500 mb-1 count-up" data-count="3000">3000</p>
+              <p class="text-gray-600">백만원</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 상세 경제 효과 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <!-- 직접 경제 효과 -->
           <div class="bg-white rounded-xl p-8 shadow-md slide-in-left">
@@ -593,36 +803,36 @@
             </div>
             <ul class="space-y-4">
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-ocean font-bold">1</span>
+                </div>
                 <div>
                   <p class="font-medium">패스포트 관련 직접 수익</p>
                   <p class="text-gray-700">약 9.35억원 (패스포트 판매, 수수료 등)</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-ocean font-bold">2</span>
+                </div>
                 <div>
                   <p class="font-medium">특산물 판매 증대</p>
                   <p class="text-gray-700">참여 업체당 평균 30% 매출 증가 예상</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-ocean font-bold">3</span>
+                </div>
                 <div>
                   <p class="font-medium">체류 시간 연장 효과</p>
                   <p class="text-gray-700">방문객 1인당 평균 지출 20% 증가</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-ocean mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-ocean bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-ocean font-bold">4</span>
+                </div>
                 <div>
                   <p class="font-medium">총 직접 경제 효과</p>
                   <p class="text-gray-700">약 30억원 이상</p>
@@ -643,36 +853,36 @@
             </div>
             <ul class="space-y-4">
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-island bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-island font-bold">1</span>
+                </div>
                 <div>
                   <p class="font-medium">일자리 창출</p>
                   <p class="text-gray-700">현지 가이드, 체험 프로그램 운영 인력 등 약 200명</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-island bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-island font-bold">2</span>
+                </div>
                 <div>
                   <p class="font-medium">주변 상권 활성화</p>
                   <p class="text-gray-700">주요 섬 인근 상권 매출 15% 증가 예상</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-island bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-island font-bold">3</span>
+                </div>
                 <div>
                   <p class="font-medium">특산물 브랜드 가치 상승</p>
                   <p class="text-gray-700">장기적 마케팅 효과 및 판로 확대</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-island mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                <div class="flex-shrink-0 w-8 h-8 bg-island bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-island font-bold">4</span>
+                </div>
                 <div>
                   <p class="font-medium">관광 산업 확장</p>
                   <p class="text-gray-700">여수 섬 관광 인프라 개선 및 관광객 증가</p>
