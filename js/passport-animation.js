@@ -1,4 +1,4 @@
-// 패스포트 애니메이션 처리 스크립트
+// 패스포트 애니메이션 처리 스크립트 
 document.addEventListener('DOMContentLoaded', function() {
   // SVG 패스포트 요소 가져오기
   const passportSvg = document.querySelector('.passport-svg-container svg');
