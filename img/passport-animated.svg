@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="580" viewBox="0 0 400 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 그라데이션 정의 -->
+    <linearGradient id="sunsetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    
+    <linearGradient id="oceanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    
+    <linearGradient id="islandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- 패턴 정의 -->
+    <pattern id="wavePattern" width="100" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0,10 C10,5 20,15 30,10 C40,5 50,15 60,10 C70,5 80,15 90,10 C100,5 110,15 120,10" stroke="#FFFFFF" stroke-width="1" fill="none" stroke-opacity="0.3"/>
+    </pattern>
+
+    <pattern id="dotPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="#000000" fill-opacity="0.05"/>
+    </pattern>
+
+    <!-- 필터 정의 -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+
+    <filter id="paperTexture" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.1 0" in="noise" result="texture"/>
+      <feBlend in="SourceGraphic" in2="texture" mode="overlay" result="blend"/>
+    </filter>
+  </defs>
+
+  <!-- 패스포트 컨테이너 -->
+  <g id="passport-container">
+    <!-- 전면 패스포트 -->
+    <g id="passport-front" transform-origin="50% 50%" filter="url(#dropShadow)">
+      <!-- 패스포트 베이스 -->
+      <rect x="20" y="20" width="360" height="540" rx="20" fill="#FFFFFF" filter="url(#paperTexture)"/>
+      <rect x="20" y="20" width="360" height="540" rx="20" fill="none" stroke="url(#sunsetGradient)" stroke-width="6"/>
+      
+      <!-- 상단 장식 부분 -->
+      <rect x="20" y="20" width="360" height="140" rx="20 20 0 0" fill="url(#sunsetGradient)"/>
+      
+      <!-- 파도 패턴 오버레이 -->
+      <rect x="20" y="20" width="360" height="140" rx="20 20 0 0" fill="url(#wavePattern)"/>
+      
+      <!-- 입체적인 장식 라인 -->
+      <path d="M20,160 C120,140 220,180 380,150" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.3" fill="none"/>
+      <path d="M20,165 C120,145 220,185 380,155" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.2" fill="none"/>
+      
+      <!-- 섬 로고 -->
+      <g transform="translate(200, 80)" filter="url(#dropShadow)">
+        <circle cx="0" cy="0" r="45" fill="#FFFFFF" fill-opacity="0.15"/>
+        <circle cx="0" cy="0" r="43" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+        
+        <!-- 바다 -->
+        <path d="M-30,15 C-20,10 -10,15 0,10 C10,15 20,10 30,15" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.8" fill="none"/>
+        
+        <!-- 섬들 -->
+        <path d="M-15,5 L0,-25 L15,5 Z" fill="#FFFFFF" fill-opacity="0.9"/>
+        <path d="M-25,0 L-10,-15 L-5,0 Z" fill="#FFFFFF" fill-opacity="0.7"/>
+        <path d="M5,0 L15,-12 L25,0 Z" fill="#FFFFFF" fill-opacity="0.7"/>
+        
+        <!-- 태양 -->
+        <circle cx="0" cy="-35" r="5" fill="#FFFFFF" fill-opacity="0.9"/>
+        <line x1="-8" y1="-35" x2="-15" y2="-35" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.7"/>
+        <line x1="8" y1="-35" x2="15" y2="-35" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.7"/>
+        <line x1="0" y1="-27" x2="0" y2="-20" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.7"/>
+        <line x1="0" y1="-43" x2="0" y2="-50" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.7"/>
+      </g>
+      
+      <!-- 타이틀 -->
+      <text x="200" y="190" fill="#EA580C" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="26" font-weight="700">여수 섬 투어</text>
+      <text x="200" y="225" fill="#EA580C" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="26" font-weight="700">미식 패스포트</text>
+      <text x="200" y="255" fill="#EA580C" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="16" font-weight="500">Island Culinary Passport</text>
+      
+      <!-- 개인 정보 영역 -->
+      <g transform="translate(0, 15)">
+        <line x1="50" y1="270" x2="350" y2="270" stroke="#DDDDDD" stroke-width="2"/>
+        <text x="50" y="260" fill="#666666" font-family="Pretendard, sans-serif" font-size="14" font-weight="500">이름 / Name</text>
+        <text x="50" y="290" fill="#333333" font-family="Pretendard, sans-serif" font-size="16" font-weight="600">홍길동 / Hong Gil-dong</text>
+        
+        <line x1="50" y1="330" x2="350" y2="330" stroke="#DDDDDD" stroke-width="2"/>
+        <text x="50" y="320" fill="#666666" font-family="Pretendard, sans-serif" font-size="14" font-weight="500">여권번호 / Passport No.</text>
+        <text x="50" y="350" fill="#333333" font-family="Pretendard, sans-serif" font-size="16" font-weight="600">YS-2026-00001</text>
+        
+        <line x1="50" y1="390" x2="350" y2="390" stroke="#DDDDDD" stroke-width="2"/>
+        <text x="50" y="380" fill="#666666" font-family="Pretendard, sans-serif" font-size="14" font-weight="500">유효기간 / Valid Until</text>
+        <text x="50" y="410" fill="#333333" font-family="Pretendard, sans-serif" font-size="16" font-weight="600">2026.09.30</text>
+      </g>
+      
+      <!-- QR 코드 -->
+      <g transform="translate(260, 430)">
+        <rect x="0" y="0" width="80" height="80" rx="5" fill="#F3F4F6"/>
+        <rect x="0" y="0" width="80" height="80" rx="5" fill="url(#dotPattern)"/>
+        
+        <!-- QR 코드 스타일링 - 실제 QR이 아닌 디자인 요소 -->
+        <rect x="10" y="10" width="15" height="15" rx="2" fill="#333333"/>
+        <rect x="55" y="10" width="15" height="15" rx="2" fill="#333333"/>
+        <rect x="10" y="55" width="15" height="15" rx="2" fill="#333333"/>
+        
+        <rect x="30" y="10" width="5" height="5" fill="#333333"/>
+        <rect x="40" y="10" width="5" height="5" fill="#333333"/>
+        <rect x="10" y="30" width="5" height="5" fill="#333333"/>
+        <rect x="20" y="30" width="5" height="5" fill="#333333"/>
+        <rect x="30" y="30" width="5" height="5" fill="#333333"/>
+        <rect x="50" y="30" width="5" height="5" fill="#333333"/>
+        <rect x="65" y="30" width="5" height="5" fill="#333333"/>
+        <rect x="35" y="40" width="5" height="5" fill="#333333"/>
+        <rect x="45" y="40" width="5" height="5" fill="#333333"/>
+        <rect x="55" y="40" width="5" height="5" fill="#333333"/>
+        <rect x="30" y="50" width="5" height="5" fill="#333333"/>
+        <rect x="40" y="50" width="5" height="5" fill="#333333"/>
+        <rect x="50" y="50" width="5" height="5" fill="#333333"/>
+        <rect x="65" y="55" width="5" height="5" fill="#333333"/>
+        <rect x="35" y="65" width="5" height="5" fill="#333333"/>
+        <rect x="45" y="65" width="5" height="5" fill="#333333"/>
+        <rect x="55" y="65" width="5" height="5" fill="#333333"/>
+      </g>
+      
+      <!-- 엠블럼 -->
+      <g transform="translate(60, 440)">
+        <circle cx="30" cy="30" r="30" fill="url(#oceanGradient)" fill-opacity="0.15"/>
+        <circle cx="30" cy="30" r="28" stroke="#0369A1" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+        <text x="30" y="35" fill="#0369A1" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="16" font-weight="700">2026</text>
+        <text x="30" y="50" fill="#0369A1" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="9" font-weight="600">여수세계섬박람회</text>
+      </g>
+      
+      <!-- 전면 하단 장식 -->
+      <path d="M20,520 L380,520" stroke="#EA580C" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 2"/>
+      <path d="M20,530 L380,530" stroke="#EA580C" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 2"/>
+      
+      <!-- 귀퉁이 도트 장식 -->
+      <circle cx="40" cy="40" r="4" fill="#FFFFFF" fill-opacity="0.8"/>
+      <circle cx="360" cy="40" r="4" fill="#FFFFFF" fill-opacity="0.8"/>
+      <circle cx="40" cy="540" r="4" fill="#EA580C" fill-opacity="0.5"/>
+      <circle cx="360" cy="540" r="4" fill="#EA580C" fill-opacity="0.5"/>
+    </g>
+
+    <!-- 후면 패스포트 -->
+    <g id="passport-back" transform-origin="50% 50%" filter="url(#dropShadow)" style="display:none">
+      <!-- 패스포트 베이스 -->
+      <rect x="20" y="20" width="360" height="540" rx="20" fill="#FFFFFF" filter="url(#paperTexture)"/>
+      <rect x="20" y="20" width="360" height="540" rx="20" fill="none" stroke="url(#islandGradient)" stroke-width="6"/>
+      
+      <!-- 헤더 -->
+      <rect x="20" y="20" width="360" height="70" rx="20 20 0 0" fill="url(#islandGradient)"/>
+      <rect x="20" y="20" width="360" height="70" rx="20 20 0 0" fill="url(#wavePattern)"/>
+      
+      <!-- 헤더 텍스트 -->
+      <text x="200" y="62" fill="#FFFFFF" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="24" font-weight="700">스탬프 컬렉션</text>
+      <text x="200" y="85" fill="#FFFFFF" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="500">Stamp Collection</text>
+      
+      <!-- 라운드 배경 장식 -->
+      <rect x="45" y="110" width="310" height="300" rx="15" fill="#F9FAFB"/>
+      <rect x="45" y="110" width="310" height="300" rx="15" fill="url(#dotPattern)"/>
+      
+      <!-- 스탬프 자리 -->
+      <g id="stamp-spots">
+        <!-- 1행 -->
+        <g transform="translate(100, 140)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#oceanGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#0369A1" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#0369A1" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">돌산도</text>
+          
+          <!-- 스탬프 완료 표시 (샘플) -->
+          <g transform="rotate(-15)">
+            <circle cx="0" cy="0" r="38" fill="#0369A1" fill-opacity="0.1"/>
+            <text x="0" y="-15" fill="#0369A1" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="10" font-weight="500">방문 확인</text>
+            <text x="0" y="20" fill="#0369A1" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="10" font-weight="500">2026.06.15</text>
+            
+            <!-- 도장 무늬 -->
+            <circle cx="0" cy="0" r="30" stroke="#0369A1" stroke-width="1" stroke-opacity="0.7" fill="none"/>
+            <path d="M-20,-20 L20,20 M-20,20 L20,-20" stroke="#0369A1" stroke-width="0.5" stroke-opacity="0.5"/>
+          </g>
+        </g>
+        
+        <g transform="translate(200, 140)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#islandGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#047857" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#047857" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">거문도</text>
+        </g>
+        
+        <g transform="translate(300, 140)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#sunsetGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#EA580C" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#EA580C" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">금오도</text>
+        </g>
+        
+        <!-- 2행 -->
+        <g transform="translate(100, 240)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#oceanGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#0369A1" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#0369A1" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">낭도</text>
+        </g>
+        
+        <g transform="translate(200, 240)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#islandGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#047857" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#047857" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">백야도</text>
+        </g>
+        
+        <g transform="translate(300, 240)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#sunsetGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#EA580C" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#EA580C" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">오동도</text>
+        </g>
+        
+        <!-- 3행 -->
+        <g transform="translate(100, 340)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#oceanGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#0369A1" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#0369A1" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">하화도</text>
+        </g>
+        
+        <g transform="translate(200, 340)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#islandGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#047857" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#047857" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">상화도</text>
+        </g>
+        
+        <g transform="translate(300, 340)">
+          <circle cx="0" cy="0" r="40" fill="#F5F5F5" stroke="url(#sunsetGradient)" stroke-width="2.5" stroke-dasharray="6 2"/>
+          <circle cx="0" cy="0" r="34" stroke="#EA580C" stroke-width="0.5" stroke-opacity="0.3" fill="none"/>
+          <text x="0" y="5" fill="#EA580C" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="700">여자도</text>
+        </g>
+      </g>
+      
+      <!-- 하단 설명 -->
+      <g transform="translate(0, 0)">
+        <rect x="70" y="430" width="260" height="70" rx="10" fill="#F3F4F6"/>
+        <text x="200" y="455" fill="#666666" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="500">각 섬 방문 시 스탬프를 수집하세요</text>
+        <text x="200" y="480" fill="#666666" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14" font-weight="500">스탬프 5개 이상 수집 시 특별 기념품 증정!</text>
+      </g>
+      
+      <!-- 로고 -->
+      <g transform="translate(150, 510)">
+        <circle cx="50" cy="25" r="25" fill="#047857" fill-opacity="0.2"/>
+        <path d="M35,25 L65,25 L50,10 Z" fill="#047857" stroke="#047857" stroke-width="1"/>
+        <path d="M30,35 L70,35 L50,50 Z" fill="#047857" stroke="#047857" stroke-width="1"/>
+      </g>
+      
+      <!-- 귀퉁이 도트 장식 -->
+      <circle cx="40" cy="40" r="4" fill="#FFFFFF" fill-opacity="0.8"/>
+      <circle cx="360" cy="40" r="4" fill="#FFFFFF" fill-opacity="0.8"/>
+      <circle cx="40" cy="540" r="4" fill="#047857" fill-opacity="0.5"/>
+      <circle cx="360" cy="540" r="4" fill="#047857" fill-opacity="0.5"/>
+    </g>
+  </g>
+  
+  <style>
+    @keyframes flipToBack {
+      0% { transform: rotateY(0deg); }
+      49% { z-index: 1; }
+      50% { z-index: -1; }
+      100% { transform: rotateY(-180deg); }
+    }
+    
+    @keyframes flipToFront {
+      0% { transform: rotateY(180deg); z-index: -1; }
+      49% { z-index: -1; }
+      50% { z-index: 1; }
+      100% { transform: rotateY(0deg); }
+    }
+    
+    #passport-front.flip-to-back {
+      animation: flipToBack 1s ease forwards;
+      display: block;
+    }
+    
+    #passport-back.flip-to-front {
+      animation: flipToFront 1s ease forwards;
+      display: block;
+    }
+  </style>
+  
+  <script type="text/javascript">
+    <![CDATA[
+    // SVG 내부 애니메이션을 위한 스크립트
+    function initPassportAnimation() {
+      var passportContainer = document.querySelector('#passport-container');
+      var frontSide = document.querySelector('#passport-front');
+      var backSide = document.querySelector('#passport-back');
+      var isFlipped = false;
+      
+      function togglePassport() {
+        if (isFlipped) {
+          // 앞면으로 뒤집기
+          frontSide.classList.add('flip-to-front');
+          backSide.classList.remove('flip-to-back');
+          
+          setTimeout(function() {
+            frontSide.style.display = 'block';
+            backSide.style.display = 'none';
+            frontSide.classList.remove('flip-to-front');
+          }, 1000);
+        } else {
+          // 뒷면으로 뒤집기
+          frontSide.classList.add('flip-to-back');
+          backSide.style.display = 'block';
+          
+          setTimeout(function() {
+            frontSide.style.display = 'none';
+            backSide.classList.add('flip-to-back');
+            frontSide.classList.remove('flip-to-back');
+          }, 1000);
+        }
+        isFlipped = !isFlipped;
+      }
+      
+      // 5초마다 자동 회전
+      function startAutoFlip() {
+        return setInterval(togglePassport, 5000);
+      }
+      
+      // 자동 회전 시작
+      var autoFlipInterval = startAutoFlip();
+      
+      // 클릭 이벤트 - 클릭할 때마다 회전
+      passportContainer.addEventListener('click', function() {
+        // 자동 회전 중지 후 재시작
+        clearInterval(autoFlipInterval);
+        togglePassport();
+        autoFlipInterval = startAutoFlip();
+      });
+    }
+    
+    // SVG가 로드된 후 초기화
+    if (document.querySelector('#passport-container')) {
+      initPassportAnimation();
+    } else {
+      document.addEventListener('DOMContentLoaded', initPassportAnimation);
+    }
+    ]]>
+  </script>
+</svg>
